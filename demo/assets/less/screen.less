@@ -1,0 +1,237 @@
+@import 'bootstrap.less';
+@import 'icons.less';
+
+@salmon: #fe674b;
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    color: #a9a7a6;  
+}
+
+html.jv-open,
+html.jv-opened,
+html > head:first-child + body {
+    background: #fff;
+}
+
+body > * > div {
+    .container;
+}
+
+[data-jv-panel],
+[data-jv-content] {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+pre,
+textarea {
+    border-color: darken(#f9f9f9, 20%);
+    background-color: #f9f9f9;
+    font-size: 85%;
+    line-height: 1.25;
+}
+
+textarea {
+    width: 100%;
+    border-width: 1px;
+    min-height: 300px;
+}
+
+a {
+    color: #333;
+    &:hover {
+        text-decoration: none;
+        color: @salmon;
+        background: #f3f3f3;
+    }
+}
+
+.salmon {
+    color: @salmon;
+}
+
+.salmon {
+    a:hover {
+        color: #000;
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin-bottom: .50em;
+    }
+}
+
+body {
+    
+    > header {
+        
+        background: @salmon;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+         
+        > div {
+            
+            position: relative;
+            min-height: 6em;
+            
+            h1 {
+                position: absolute;
+                z-index: 1;
+                left: 50%;
+                top: 50%;
+                width: 75px;
+                height: 40px;
+                margin: -25px 0 0 -32px;
+                .screen-xs & {
+                    width: 60px;
+                    margin-left: -30px;
+                }                
+            }
+            
+            
+            .btn {
+                position: absolute;
+                z-index: 0;
+                top: 50%;
+                margin-top: -1.15em;
+                font-size: 150%;
+                color: #fff;
+                background-color: transparent;
+                &.focus,
+                &:focus,
+                &:hover {
+                    color: #fff;
+                    background-color: darken(@salmon, 5%)
+                }
+               
+                span {
+                    .fa;
+                    .fa-bars;
+                }
+                + .btn {
+                    right: @grid-gutter-width/2;
+                    span {
+                        .fa-cog;
+                    }
+                }
+
+                &.jv-active {
+                    span {
+                        .fa-times;
+                    }
+                }
+                
+                .screen-xs & {
+                    font-size: 125%;
+                }
+            }
+        }
+    } 
+    
+    #middle {
+        > div {
+            margin-top: 8em;
+            h1,h2 {
+                .lead;
+                color: #333;
+            }
+            h1 {
+                font-size: 200%;
+                .screen-xs & {
+                    line-height: 1.15;
+                }
+            }            
+            h2 {
+                font-size: 150%;
+            }
+        }
+    }
+    
+    > footer {
+        margin-top: 3em;
+    }
+}
+
+#jvette {
+
+    div {
+        width: auto;
+    }
+    
+    div,
+    section,
+    p {
+        color: #999;
+    }
+    
+    h1, h2 {
+        .lead;
+        font-size: 125%;
+        padding-bottom: .25em;
+        margin-bottom: .25em;
+        line-height: 1.0;
+        color: lighten(#999, 40%);        
+    }
+    
+    h2 {
+        font-size: 110%;
+    }
+    
+    nav {
+        
+        margin-bottom: 1em;
+        
+        ul {
+            list-style: none;
+            &,
+            li {
+                padding: 0;
+                margin: 0;
+            }
+            li {
+                margin-bottom: 2px;
+            }
+            a {
+                display: block;
+                width: 100%;
+                padding: .5em 0;
+                text-indent: 1em;
+                -webkit-transition: background-color 500ms, color, 250ms;
+                   -moz-transition: background-color 500ms, color, 250ms;
+                        transition: background-color 500ms, color, 250ms;                
+                color: #777;
+                background: lighten(#333, 5%);
+                &:hover {
+                    text-decoration: none;
+                }
+                &.active,
+                &.hover {
+                    -webkit-transition: background-color 500ms, color, 250ms;
+                       -moz-transition: background-color 500ms, color, 250ms;
+                            transition: background-color 500ms, color, 250ms;                
+                    background-color: #fff;
+                    color: @salmon;
+                }
+            }
+        }
+    }
+}
+
+.screen-xs body#jvette {
+    > div {
+        min-width: 250px;
+    }
+}

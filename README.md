@@ -1,2 +1,2 @@
 # jVette
-A native-inspired split window library powered by jQuery.
+jVette is a native inspired off canvas navigation library powered by jQuery.

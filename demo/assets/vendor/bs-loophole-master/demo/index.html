@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7 ie"><![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8 ie7 ie"><![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9 ie8 ie"><![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie"><![endif]-->
+<!--[if gt IE 9]> <html class="gt-ie9 ie"><![endif]-->
+<html lang="en-US" id="index">
+    <head xmlns="http://www.w3.org/1999/xhtml">
+        <title>bs-loophole - A script to infer the active Bootstrap screen size media query.</title>
+        <meta name="author" content="@explodybits" />
+        <meta name="keywords" content="bootstrap, screen size, size, media query, dynamic, javascript, js" />
+        <meta name="description" content="Infers the active Bootstrap screen size media query and adds the resulting screen-(xs|sm|md|lg|xl) class to &lt;html&gt;" />
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="assets/css/screen.min.css" />            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+        /**<![CDATA[*/
+            window.jQuery || document.write('<script src="assets/js/jquery.min.js">\x3C/script>');
+        /**]]>*/
+        </script>
+        <script src="assets/js/bs-loophole.min.js"></script>
+    </head>
+    <body>        
+        <a href="https://github.com/explodybits"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>        
+        <div id="middle" role="main">
+            <div>
+                <h1>bs-loophole demo <a onclick="this.href=(function(){return jQuery.map([104,116,116,112,58,47,47,116,119,105,116,116,101,114,46,99,111,109,47,101,120,112,108,111,100,121,98,105,116,115],function(i){return String.fromCharCode(i);})})().join('');" target="_blank" href="#">(via @explodybits)</a></h1>
+                <p>Infers the active Bootstrap screen size media query and adds the resulting <code>screen-(xs|sm|md|lg|xl)</code> class to <code>&lt;html&gt;</code>. Similar to the <code>visible-*</code>, but added dynamically and updated on <code>$(window).resize</code>
+                <h2>(resize the window)</h2>
+                <div id="device-mobile">
+                    <h1>SCREEN XTRA SMALL (MOBILE)</h1>
+                </div>                
+                <div id="screen-xs">
+                    <h1>SCREEN XTRA SMALL</h1>
+                </div>
+                <div id="screen-sm">
+                    <h1>SCREEN SMALL</h1>
+                </div>                
+                <div id="screen-md">
+                    <h1>SCREEN MEDIUM</h1>
+                </div>
+                <div id="screen-lg">
+                    <h1>SCREEN LARGE</h1>
+                </div> 
+                <div id="screen-xl">
+                    <h1>SCREEN XTRA LARGE</h1>
+                </div>           
+            </div>            
+        </div>
+        <script>
+        /**<![CDATA[*/    
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-26657586-1', 'auto');
+          ga('send', 'pageview');
+          /**]]>*/
+        </script>        
+    </body>
+</html>
