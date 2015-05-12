@@ -7,7 +7,7 @@ jVette is a native inspired off canvas navigation library powered by jQuery.
  * Fully evented
  * Perfect compliment to any responsive design
 
-# Working Examples
+# Live Examples
  * <a href="http://hookr.io" target="_blank">hookr.io - The WordPress Hook/API Index</a>
  * <a href="http://lessify.io" target="_blank">lessify.io - A configurable CSS to LESS converter and LESS learning tool</a>
  * <a href="http://sassify.io" target="_blank">sassify.io - A configurable CSS to SCSS converter and SCSS learning tool</a>
