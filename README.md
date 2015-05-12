@@ -7,11 +7,21 @@ jVette is a native inspired off canvas navigation library powered by jQuery.
  * Fully evented
  * Perfect compliment to any responsive design
 
+# Working Examples
+ * <a href="http://hookr.io" target="_blank">hookr.io - The WordPress Hook/API Index</a>
+ * <a href="http://lessify.io" target="_blank">lessify.io - A configurable CSS to LESS converter and LESS learning tool</a>
+ * <a href="http://sassify.io" target="_blank">sassify.io - A configurable CSS to SCSS converter and SCSS learning tool</a>
+
 ## jVette Official
 For installation & examples, checkout:
-http://jvette.io
+<a href="http://jvette.io" target="_blank">http://jvette.io</a>
+
+## Demo
+This is included with the GitHub Repo
+<a href="http://explodybits.com/github/jvette/" target="_blank">http://explodybits.com/github/jvette/</a>
 
 ### Getting Started
+Add the references to the jVette assets.
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
@@ -36,8 +46,7 @@ If jVette is enabled, the element(s) marked with ```data-jv-trigger``` will open
 <!-- closes the open panel -->
 <button data-jv-trigger="close" />
 ```
-
-[Learn more about element trigger(s).](http://jvette.io/triggers)
+<a href="http://jvette.io/triggers/" target="_blank">Learn more about element trigger(s).</a>
 
 ### Okay, now define your content elements:
 
@@ -52,7 +61,7 @@ Add the data attribute ```data-jv-content``` with a value of ```left | right``` 
 <!-- specifying content order with data-jv-order attribute -->
 <div data-jv-content="left" data-jv-order="1">Second</div>
 ```
-[Learn more about content element(s).](http://jvette.io/content)
+<a href="http://jvette.io/content/" target="_blank">Learn more about element content element(s).</a>
 
 ### Almost there… invoke jVette:
 
@@ -82,5 +91,4 @@ jVette is a singleton and can be invoked with or without the new operator.
 /**]]>*/
 </script>
 ```
-
-[Learn more about invocation & options.](http://jvette.io/invoking)
+<a href="http://jvette.io/invoking/" target="_blank">Learn more about invocation & options.</a>
