@@ -66,7 +66,7 @@ Add the data attribute ```data-jv-content``` with a value of ```left | right``` 
 ### Almost there… invoke jVette:
 
 jVette is a singleton and can be invoked with or without the new operator.
-```js
+```html
 <script>
 /**<![CDATA[*/
 ;(function(jVette)
@@ -90,5 +90,34 @@ jVette is a singleton and can be invoked with or without the new operator.
 })(window.jVette);
 /**]]>*/
 </script>
+```
+
+jVette default options:
+```js
+var defaults = {
+    // enabled by default
+    disabled: false
+   ,transforms: true
+    //  animation
+   ,slide: {
+        easing: 'swing'
+       ,duration: 350 
+    }
+   // TouchSwipe (if available) options
+   ,swipe: {
+       threshold: 10
+      ,allowPageScroll: 'vertical'                    
+    }
+   // events
+   ,onenable: function(e) {}
+   ,onenabled: function(e) {}
+   ,ondisable: function(e) {}
+   ,ondisabled: function(e) {}
+   ,onopen: function(e) {}
+   ,onopened: function(e) {}
+   ,onclose: function(e) {}
+   ,onclosed: function(e) {}
+   ,onchanged: function(e) {}
+};
 ```
 <a href="http://jvette.io/invoking/" target="_blank">Learn more about invocation & options.</a>
