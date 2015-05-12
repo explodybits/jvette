@@ -804,7 +804,10 @@ var jVette = (function($, w, d, undefined)
             t.off('touchstart mousedown', trigger);
 
             if (false !== opts.swipe && $.fn.swipe)
-                $('.jv-panel,.jv-ignore').off('mousemove touchmove', cancel);
+                $('.jv-panel,.jv-ignore').off('mousemove touchmove',  function(e)
+                {
+                    e.preventDefault();
+                });
 
             if (D & (L | R)) {
                 this.on('closed', function(e)

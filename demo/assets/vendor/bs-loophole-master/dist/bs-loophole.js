@@ -37,12 +37,17 @@
         screen = v;        
         return v;
     };
-
-    (function() {
-        if (size <= sizes.MD && /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-            h.className += ' device-mobile';        
-    })();
-
+    
+    var resize = function()
+    {
+        if (!resize.re)
+            resize.re = new RegExp('\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
+        
+        t = clearTimeout(t);            
+        h.className = h.className.replace(resize.re, '');
+        h.className += (' ' + apply());
+    };        
+    
     ;(function()
     {
         $(function()
@@ -51,25 +56,23 @@
             h.removeChild(b);
             $(d.body).append(e);
             e = e.get(0);
+            resize();
         });
 
         b.appendChild(e);
         h.appendChild(b);
     })();
-
+    
     ;(function()
     {
-        var re = new RegExp('\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
-        
-        var resize = function()
-        {
-            t = clearTimeout(t);            
-            h.className = h.className.replace(re, '');
-            h.className += (' ' + apply());
-        };
+        apply();
+        if (size <= sizes.MD && /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+            h.className += ' device-mobile';        
+    })();
 
+    ;(function()    
+    {
         resize();
-
         $(w).resize(function()
         {
             t = clearTimeout(t);
