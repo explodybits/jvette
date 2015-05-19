@@ -1,5 +1,5 @@
 # jVette
-jVette is a native inspired off canvas navigation library powered by jQuery.
+jVette is a native inspired off canvas library powered by jQuery.
 
  * Small footprint (3.7k gzipped)
  * Silky smooth CSS3 animations
